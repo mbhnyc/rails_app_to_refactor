@@ -33,18 +33,30 @@ gem 'bootsnap', '~> 1.16', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
+# TODO: add rack-mini-profiler
+# TODO: sentry / datadog / sumologic
+# TODO: bullet - detects N+1 queries and will yell at you in logs
+# TODO: rubocop-okakase - this is to help you IDE enforce coding standards
+# TODO: lograge
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # TODO: gem "faker" for random and powerful test/development data
 
   gem 'pry-byebug', '~> 3.10', '>= 3.10.1'
 
   gem 'letter_opener', '~> 1.8', '>= 1.8.1'
 
   gem 'did_you_mean', '~> 1.6', '>= 1.6.3'
+
+  # TODO: Add Annotate - not having to jump to schema.rb is a major time saver, you should always have full context on a model's columns/indexes where it's useful, in the model file
 end
 
 group :development do
+  # TODO: Add me now good god what have we done! 💥 gem "strong-migrations"
+
   gem 'rexml', '~> 3.2', '>= 3.2.5'
 
   gem 'rubycritic', '~> 4.7', require: false

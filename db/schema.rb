@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_08_115941) do
     t.datetime "completed_at", precision: nil
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    # TODO: ask product if they're ABSOLUTELY SURE users will never want to UNdelete a todo/todolist
     t.integer "todo_list_id", null: false
     t.index ["completed_at"], name: "index_todos_on_completed_at"
     t.index ["due_at"], name: "index_todos_on_due_at"

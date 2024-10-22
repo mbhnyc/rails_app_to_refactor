@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     end
   end
 
+  # TODO: nested resources are generally frowned upon,
+  # since you can refer to the child :todo directly, it has a unique ID, why complicate your routes?
+  # consider shallow setting
   resources :todo_lists do
     resources :todos do
       member do

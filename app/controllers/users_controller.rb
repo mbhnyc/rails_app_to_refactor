@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
+# TODO: consider roles for users so we can have permission to act as others
+
 class UsersController < ApplicationController
+
+  # TODO: move auth to before_action, except: create
+
   def create
     user_params = params.require(:user).permit(:name, :email, :password, :password_confirmation)
 

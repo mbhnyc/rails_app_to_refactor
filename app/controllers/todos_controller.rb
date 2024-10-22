@@ -65,6 +65,7 @@ class TodosController < ApplicationController
 
     def todo_lists_only_non_default? = false
 
+    # TODO: Consider moving the create portion of this conditional into the create action itself
     def set_todos
       scope =
         if params[:todo_list_id].present?

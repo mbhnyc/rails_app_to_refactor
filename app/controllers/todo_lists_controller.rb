@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 class TodoListsController < ApplicationController
+  # TODO: ensure as codebase grows that data access is as close to the consumer as possible
+  # TODO: if we discover shared functionality, consider ActionSupport::Concerns as a method of organization
+
   before_action :authenticate_user
 
   before_action :set_todo_lists

@@ -3,5 +3,7 @@ class AddTodoListIdToTodos < ActiveRecord::Migration[7.0]
     remove_reference(:todos, :user)
 
     add_reference(:todos, :todo_list, null: false, index: true, foreign_key: true)
+
+    # TODO: cuncurrently: true MUST be set
   end
 end
